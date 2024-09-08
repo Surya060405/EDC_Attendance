@@ -11,8 +11,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///EDCAttendance.db'
 mongo = PyMongo(app)
 connection = MongoClient('localhost', 5000)
 # Office coordinates (latitude, longitude)
-OFFICE_COORDINATES = (22.55655514113349, 88.30784298509921)  # Replace with your office's latitude and longitude
-ALLOWED_RADIUS = 435  # Allowable radius in degrees (~11 km)
+OFFICE_COORDINATES = (22.555761914211185,  88.30925180140297)  # Replace with your office's latitude and longitude
+ALLOWED_RADIUS = 0.100  # Allowable radius in degrees (~11 km)
 
 global_usr = None ;
 global_pass = None ;
@@ -22,7 +22,7 @@ global_pass = None ;
 @app.route('/')
 def home():
 
-    return render_template('index.html')  # This is your main page
+    return render_template('signup.html')  # This is your main page
 
 @app.route('/check_location', methods=['POST','GET'])
 def check_location():

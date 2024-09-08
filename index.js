@@ -26,8 +26,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // Office coordinates (latitude, longitude)
-const OFFICE_COORDINATES = { latitude: 22.55655514113349, longitude: 88.30784298509921 };
-const ALLOWED_RADIUS = 15; // Allowable radius in meters (~11 km)
+const OFFICE_COORDINATES = { latitude: 22.555761914211185, longitude: 88.30925180140297 };
+const ALLOWED_RADIUS = 300; // Allowable radius in meters (~11 km)
 
 let globalUsr = null;
 let globalPass = null;
@@ -51,7 +51,7 @@ app.post('/check_location', (req, res) => {
 });
 
 app.get('/notinedc', (req, res) => {
-    res.render('notinedc');
+    res.render('notInEDC.html');
 });
 
 app.get('/turnonlocation', (req, res) => {
